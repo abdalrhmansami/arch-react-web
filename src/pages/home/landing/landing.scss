@@ -1,0 +1,69 @@
+@use "../../../scss/abstracts/" as *;
+
+.landing-page {
+  margin: 0;
+  padding: 50px 80px;
+  @include flex(center, space-around);
+}
+
+.land-p {
+  font-size: $fontSizeLarge;
+  font-weight: 700;
+}
+
+.land-small-p {
+  font-weight: 400;
+  font-size: $fontSizeNormal;
+  margin-top: 20px;
+}
+
+.land-button {
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: $fontSizeNormal;
+  font-weight: 400;
+  background-color: $white;
+  margin-top: 50px;
+  border: 1px solid black;
+  font-family: $fontFamily;
+  transition: 0.2s all ease;
+}
+.land-button:hover{
+  color: $dangerColor;
+  border: 1px solid $dangerColor;
+}
+
+.land-image {
+  background-image: url("../../../assets/landPic.jpeg");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 140%;
+  margin-right: -90px;
+}
+
+@include tablet {
+  .landing-page {
+    margin: 0;
+    padding: 50px 50px;
+    @include flex(center, space-around);
+    flex-direction: column;
+
+    & > section {
+      margin-bottom: 50px;
+    }
+  }
+
+  .land-p {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .land-image {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+  }
+}

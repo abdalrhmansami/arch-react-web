@@ -1,0 +1,25 @@
+@use "../../scss/abstracts/" as *;
+
+.s-card {
+  margin-bottom: 70px;
+  @include centerDiv();
+  .content-card {
+    margin-top: 20px;
+    & > p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .btn-card {
+      font-size: 15px;
+    }
+    .btn-card:hover {
+      color: $dangerColor;
+    }
+  }
+}
+
+@include minComputer {
+  .s-card {
+    text-align: center;
+  }
+}

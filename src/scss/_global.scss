@@ -1,0 +1,102 @@
+@use "./abstracts/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: #f62433;
+  color: $white;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $fontFamily;
+  color: $mainColor;
+  font-size: $fontSizeNormal;
+  line-height: 1.5;
+  background-color: $mainBg;
+  overflow-x: hidden;
+}
+
+.error-label {
+  font-weight: 700;
+  color: $dangerColor;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.danger-border {
+  border: 1px solid $dangerColor;
+}
+
+img {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.mb {
+  margin-bottom: $spacing;
+
+  @include tablet {
+    margin-bottom: $mobileSpacing;
+  }
+}
+
+.bg-black {
+  background-color: $mainColor;
+  color: $white;
+}
+
+.bg-white {
+  background-color: $white;
+  color: $mainColor;
+}
+
+.bg-main {
+  background-color: $mainBg;
+}
+
+.title {
+  font-size: $fontSizeMedium;
+  font-weight: 700;
+}
+
+.red {
+  color: $dangerColor;
+}
+
+.haed__page-rt {
+  @include flex(flex-end, flex-end);
+  margin-bottom: 20px;
+}
+
+.haed__page-cn {
+  @include flex(flex-end, space-between);
+  margin-bottom: 20px;
+}
+
+.haed__page-lt {
+  @include flex(flex-end, flex-start);
+  margin-bottom: 20px;
+}
+
+.form__content {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 20px;
+}
