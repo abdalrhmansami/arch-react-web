@@ -18,7 +18,7 @@ const Services = () => {
         <Card />
       </section>
       <section className="view-project">
-        <section>
+        <section className="section-view1">
           <p className="address-project">68 High street, London, England</p>
           <p className="land-p">
             23 floor office <br /> building in the heart of London city
@@ -47,7 +47,7 @@ const Services = () => {
         </section>
         <div className="service-image"></div>
       </section>
-      <section className="view-project">
+      <section className="view-project2">
         <div className="service-image2"></div>
         <section className="section-view2">
           <p className="address-project">68 North area 23, Los Angeles, USA</p>

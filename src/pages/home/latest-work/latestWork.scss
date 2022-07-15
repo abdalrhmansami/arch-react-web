@@ -1,0 +1,80 @@
+@use "../../../scss/abstracts/" as *;
+
+.work-latest {
+  margin-top: 130px;
+  .photo-work {
+    margin-top: 60px;
+    @include flex(center, space-between);
+    flex-flow: row wrap;
+
+    .pic-work {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: calc(20% - 8px);
+    }
+
+    .pic1-work {
+      background-image: url("../../../assets/work-photo/joel.jpeg");
+    }
+    .pic2-work {
+      background-image: url("../../../assets/work-photo/joel2.jpeg");
+    }
+    .pic3-work {
+      background-image: url("../../../assets/work-photo/joel3.jpeg");
+    }
+    .pic4-work {
+      background-image: url("../../../assets/work-photo/joel4.jpeg");
+    }
+    .pic5-work {
+      background-image: url("../../../assets/work-photo/joel5.jpeg");
+    }
+  }
+
+  .center {
+    @include centerDiv();
+    display: block;
+  }
+}
+
+@include minComputer {
+  .work-latest {
+    .photo-work {
+      flex-flow: row wrap;
+      @include flex(start, flex-start);
+
+      .pic-work {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(33% + 2px);
+      }
+    }
+  }
+}
+
+@include tablet {
+  .work-latest {
+    .photo-work {
+      @include flex(center, space-between);
+
+      .pic-work {
+        flex-basis: calc(50% - 2px);
+        margin-bottom: 3px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .work-latest {
+    .photo-work {
+      .pic-work {
+        flex-basis: calc(100%);
+        height: 600px;
+      }
+    }
+  }
+}

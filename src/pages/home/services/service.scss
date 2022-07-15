@@ -1,17 +1,17 @@
 @use "../../../scss/abstracts/" as *;
 
+.service-head {
+  text-align: center;
+  & > h2 {
+    font-size: $fontSizeLarge;
+  }
+  & > p {
+    width: 50%;
+    @include centerDiv();
+  }
+}
 .service-page {
   padding: 50px 90px;
-  .service-head {
-    text-align: center;
-    & > h2 {
-      font-size: $fontSizeLarge;
-    }
-    & > p {
-      width: 50%;
-      @include centerDiv();
-    }
-  }
 
   .service-cards {
     @include flex(center, space-between);
@@ -27,6 +27,12 @@
       width: 100%;
       flex-direction: column;
     }
+  }
+}
+
+@include tablet {
+  .service-page {
+    padding: 50px 70px;
   }
 }
 
@@ -59,7 +65,7 @@
   }
 }
 
-.view-project {
+.view-project2 {
   margin-top: 170px;
   @include flex(start, space-between);
 
@@ -88,6 +94,60 @@
     }
     .personal-job2 {
       font-size: 15px;
+    }
+  }
+}
+
+/// start from gere
+//! Responsive
+
+@include tablet {
+  .view-project {
+    flex-direction: column-reverse;
+
+    .section-view1 {
+      margin-top: 40px;
+    }
+
+    .address-project {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .service-image {
+      width: 170%;
+      height: 500px;
+      margin-left: -90px;
+    }
+  }
+
+  .view-project2 {
+    margin-top: 70px;
+    flex-direction: column;
+    .address-project {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .service-image2 {
+      background-image: url("../../../assets/annie.jpeg");
+      width: 170%;
+      height: 500px;
+      margin-left: -90px;
+    }
+
+    .section-view2 {
+      margin-left: 0;
+    }
+
+    .personal-service2 {
+      @include flex(center, flex-start);
+      & > img {
+        margin-right: 20px;
+      }
+      .personal-job2 {
+        font-size: 15px;
+      }
     }
   }
 }
