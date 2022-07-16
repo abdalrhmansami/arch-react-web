@@ -1,5 +1,6 @@
 import "./ourTeam.scss";
 import TeamCard from "../../../components/team-card/TeamCard";
+import Slide from "react-reveal/Slide";
 
 const OurTeam = () => {
   return (
@@ -21,22 +22,30 @@ const OurTeam = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adip</p>
       </div>
       <section className="number-section">
-        <div className="number-element">
-          <h1 className="number-haed">30</h1>
-          <p className="number-caption">Years of experience</p>
-        </div>
-        <div className="number-element">
-          <h1 className="number-haed">600+</h1>
-          <p className="number-caption">Finished projects</p>
-        </div>
-        <div className="number-element">
-          <h1 className="number-haed">120</h1>
-          <p className="number-caption">Awards</p>
-        </div>
-        <div className="number-element">
-          <h1 className="number-haed">70+</h1>
-          <p className="number-caption">Employees</p>
-        </div>
+        <Slide bottom>
+          <div className="number-element">
+            <h1 className="number-haed">30</h1>
+            <p className="number-caption">Years of experience</p>
+          </div>
+        </Slide>
+        <Slide bottom>
+          <div className="number-element">
+            <h1 className="number-haed">600+</h1>
+            <p className="number-caption">Finished projects</p>
+          </div>
+        </Slide>
+        <Slide bottom>
+          <div className="number-element">
+            <h1 className="number-haed">120</h1>
+            <p className="number-caption">Awards</p>
+          </div>
+        </Slide>
+        <Slide bottom>
+          <div className="number-element">
+            <h1 className="number-haed">70+</h1>
+            <p className="number-caption">Employees</p>
+          </div>
+        </Slide>
       </section>
     </div>
   );

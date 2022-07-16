@@ -1,4 +1,5 @@
 import "./latestWork.scss";
+import Zoom from "react-reveal/Zoom";
 
 const LatestWork = () => {
   return (
@@ -11,11 +12,21 @@ const LatestWork = () => {
         </p>
       </div>
       <section className="photo-work">
-        <div className="pic-work pic1-work"></div>
-        <div className="pic-work pic2-work"></div>
-        <div className="pic-work pic3-work"></div>
-        <div className="pic-work pic4-work"></div>
-        <div className="pic-work pic5-work"></div>
+        <Zoom bottom>
+          <div className="pic-work pic1-work"></div>
+        </Zoom>
+        <Zoom bottom>
+          <div className="pic-work pic2-work"></div>
+        </Zoom>
+        <Zoom bottom>
+          <div className="pic-work pic3-work"></div>
+        </Zoom>
+        <Zoom bottom>
+          <div className="pic-work pic4-work"></div>
+        </Zoom>
+        <Zoom bottom>
+          <div className="pic-work pic5-work"></div>
+        </Zoom>
       </section>
       <br />
       <br />

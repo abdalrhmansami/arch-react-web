@@ -76,7 +76,6 @@
 .view-project2 {
   margin-top: 170px;
   @include flex(start, space-between);
-
   .address-project {
     margin-top: -40px;
     margin-bottom: 20px;
@@ -93,6 +92,7 @@
 
   .section-view2 {
     margin-left: 40px;
+    overflow: hidden
   }
 
   .personal-service2 {
