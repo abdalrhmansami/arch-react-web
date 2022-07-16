@@ -1,0 +1,16 @@
+@use "../../scss/abstracts/" as *;
+
+.team-card {
+  width: 90%;
+  @include centerDiv();
+  & > img {
+    width: 100%;
+  }
+  margin-bottom: 50px;
+  .member-name{
+     font-size: $fontSizeNormal;
+  }
+  .member-job{
+    font-size: 15px;
+  }
+}

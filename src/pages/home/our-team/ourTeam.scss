@@ -1,3 +1,50 @@
-.our-team{
-    margin-top: 100px;
+@use "../../../scss/abstracts/" as *;
+
+.our-team {
+  margin-top: 100px;
+}
+
+.team-section {
+  margin: 130px 0;
+  width: 90%;
+  @include centerDiv();
+}
+
+.number-section {
+  padding: 0 100px;
+  margin: 150px 0;
+  @include flex(center, space-between);
+  flex-wrap: wrap;
+}
+
+.number-element {
+  text-align: center;
+}
+
+.number-haed {
+  font-size: 88px;
+  color: $dangerColor;
+}
+
+.number-caption {
+  font-weight: 700;
+}
+
+@include minComputer {
+  .number-element {
+    margin-bottom: 50px;
+    flex: 0 1 calc(50%);
+  }
+}
+
+@include tablet {
+  .number-element {
+    flex: 0 1 calc(100%);
+  }
+}
+
+@include mobile {
+  .number-haed {
+    font-size: 50px;
+  }
 }

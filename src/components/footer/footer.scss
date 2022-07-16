@@ -1,0 +1,78 @@
+@use "../../scss/abstracts/" as *;
+
+footer {
+  font-family: $fontFamily;
+  background-color: #363636;
+
+  .top-section {
+    padding: 40px 60px;
+    @include flex(center, space-between);
+
+    .logo-footer {
+      font-size: $fontSizeMedium;
+      font-weight: 700;
+      color: $white;
+      flex: 0 1 20%;
+    }
+
+    .footer-list-container {
+      flex: 0 1 30%;
+    }
+
+    .footer-list {
+      @include flex();
+      color: $white;
+      font-size: 15px;
+      & > * {
+        flex: 0 1 30%;
+      }
+    }
+
+    .footer-icons {
+      @include flex(center, space-between);
+      flex: 0 1 15%;
+    }
+  }
+
+  .line-footer {
+    background-color: aliceblue;
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 0.3px;
+  }
+
+  .copy-right {
+    font-size: 13px;
+    color: rgb(162, 162, 162);
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+@include tablet {
+  footer {
+    .top-section {
+      flex-direction: column;
+
+      .logo-footer {
+        margin-bottom: 10px;
+      }
+
+      .footer-list-container {
+        margin-bottom: 20px;
+      }
+
+      .footer-list {
+        & > * {
+          margin: 10px 10px 0px 10px;
+        }
+      }
+
+      .footer-icons {
+        & > * {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
