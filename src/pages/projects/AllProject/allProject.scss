@@ -1,8 +1,55 @@
 @use "../../../scss/abstracts/" as *;
 
-.work-latest {
-  margin-top: 130px;
+.tabs-projects {
+  margin-top: 30px;
+  width: 40%;
+  @include centerDiv();
+  @include flex();
 
+  & > ul {
+    @include flex(center, space-between);
+    width: 100%;
+    font-size: 13px;
+    transition: 0.3s all ease;
+
+    & > li {
+      padding: 10px 5px;
+      position: relative;
+      cursor: pointer;
+      transition: 0.2s all ease;
+
+      &::before {
+        transition: 0.2s all ease;
+        position: absolute;
+        height: 3px;
+        content: "";
+        width: 0%;
+        background-color: $dangerColor;
+        z-index: 99;
+        bottom: -1px;
+        left: 0;
+      }
+
+      &.active {
+        color: $dangerColor;
+      }
+
+      &.active::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.line-project {
+  width: 40%;
+  height: 2px;
+  background-color: rgb(238, 238, 238);
+  @include centerDiv();
+}
+
+//  projectsection
+.project-section {
   .photo-work {
     margin-top: 60px;
     @include flex(center, space-between);
@@ -12,8 +59,9 @@
       height: 500px;
       flex-grow: 0;
       flex-shrink: 1;
-      flex-basis: calc(20% - 8px);
+      flex-basis: calc(25% - 8px);
       overflow: hidden;
+      margin-bottom: 10px;
     }
 
     .pic-work {
@@ -89,12 +137,12 @@
 }
 
 @include minComputer {
-  .work-latest {
+  .project-section {
     .photo-work {
       flex-flow: row wrap;
       @include flex(start, flex-start);
-      
       .parent-work-pic {
+        margin-bottom: 2px;
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: calc(33% + 2px);
@@ -104,10 +152,10 @@
 }
 
 @include tablet {
-  .work-latest {
+  .project-section {
     .photo-work {
       @include flex(center, space-between);
-      
+
       .parent-work-pic {
         flex-grow: 0;
         flex-shrink: 1;
@@ -120,7 +168,7 @@
 }
 
 @include mobile {
-  .work-latest {
+  .project-section {
     .photo-work {
       .parent-work-pic {
         flex-basis: calc(100%);

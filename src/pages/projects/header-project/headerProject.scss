@@ -1,0 +1,14 @@
+@use "../../../scss/abstracts/" as *;
+
+.header-project {
+  background-color: #f7f7f7;
+  height: 300px;
+  @include flex();
+  .center-project-el {
+    text-align: center;
+    & > p {
+      color: rgb(132, 132, 132);
+      font-size: 15px;
+    }
+  }
+}
