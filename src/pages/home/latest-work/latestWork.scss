@@ -7,13 +7,48 @@
     @include flex(center, space-between);
     flex-flow: row wrap;
 
-    .pic-work {
-      background-repeat: no-repeat;
-      background-size: cover;
+    .parent-work-pic {
       height: 500px;
       flex-grow: 0;
       flex-shrink: 1;
       flex-basis: calc(20% - 8px);
+      overflow: hidden;
+    }
+    .pic-work {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: 0.3s all ease;
+
+      .red-overly {
+        cursor: pointer;
+        transition: 0.3s all ease;
+        background-image: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.226),
+          $dangerColor
+        );
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+        color: $white;
+
+        .caption-work {
+          transition: 0.3s all ease;
+          opacity: 0;
+          transform: translate(0, 40px);
+          text-align: center;
+          cursor: pointer;
+          & > h2 {
+            font-size: 20px;
+          }
+          & > p {
+            font-size: 12px;
+          }
+        }
+      }
     }
 
     .pic1-work {
@@ -31,6 +66,18 @@
     .pic5-work {
       background-image: url("../../../assets/work-photo/joel5.jpeg");
     }
+
+    .pic-work:hover {
+      transform: scale(1.2);
+      .red-overly {
+        opacity: 1;
+
+        .caption-work {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+    }
   }
 
   .center {
@@ -44,8 +91,7 @@
     .photo-work {
       flex-flow: row wrap;
       @include flex(start, flex-start);
-
-      .pic-work {
+      .parent-work-pic {
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: calc(33% + 2px);
@@ -58,8 +104,9 @@
   .work-latest {
     .photo-work {
       @include flex(center, space-between);
-
-      .pic-work {
+      .parent-work-pic {
+        flex-grow: 0;
+        flex-shrink: 1;
         flex-basis: calc(50% - 2px);
         margin-bottom: 3px;
         height: 400px;
@@ -71,7 +118,7 @@
 @include mobile {
   .work-latest {
     .photo-work {
-      .pic-work {
+      .parent-work-pic {
         flex-basis: calc(100%);
         height: 600px;
       }
