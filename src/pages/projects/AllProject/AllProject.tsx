@@ -1,6 +1,8 @@
 import { useState } from "react";
-import "./allProject.scss";
 import Zoom from "react-reveal/Zoom";
+
+import "./allProject.scss";
+import { dataTabs } from "../../../constant/tabs-data";
 
 const AllProject = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -8,14 +10,6 @@ const AllProject = () => {
   const activeElement = (index: number) => {
     setActiveIndex(index);
   };
-
-  const dataTabs = [
-    { name: "All", number: 1 },
-    { name: "APARTMENT", number: 2 },
-    { name: "OFFICES", number: 3 },
-    { name: "RESIDENT", number: 4 },
-    { name: "SHOPPING", number: 5 },
-  ];
 
   return (
     <div>

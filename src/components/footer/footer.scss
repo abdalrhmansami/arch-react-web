@@ -23,6 +23,7 @@ footer {
       @include flex();
       color: $white;
       font-size: 15px;
+      
       & > * {
         flex: 0 1 30%;
       }

@@ -2,15 +2,18 @@
 
 .service-head {
   text-align: center;
+
   & > h2 {
     font-size: $fontSizeLarge;
     font-weight: 700;
   }
+
   & > p {
     width: 50%;
     @include centerDiv();
   }
 }
+
 @include mobile {
   .service-head {
     & > h2 {
@@ -18,6 +21,7 @@
     }
   }
 }
+
 .service-page {
   padding: 50px 90px;
 
@@ -64,9 +68,11 @@
 
   .personal-service {
     @include flex(center, flex-start);
+
     & > img {
       margin-right: 20px;
     }
+
     .personal-job {
       font-size: 15px;
     }
@@ -76,6 +82,7 @@
 .view-project2 {
   margin-top: 170px;
   @include flex(start, space-between);
+
   .address-project {
     margin-top: -40px;
     margin-bottom: 20px;
@@ -92,14 +99,16 @@
 
   .section-view2 {
     margin-left: 40px;
-    overflow: hidden
+    overflow: hidden;
   }
 
   .personal-service2 {
     @include flex(center, flex-start);
+
     & > img {
       margin-right: 20px;
     }
+
     .personal-job2 {
       font-size: 15px;
     }
@@ -132,6 +141,7 @@
   .view-project2 {
     margin-top: 70px;
     flex-direction: column;
+
     .address-project {
       margin-top: 40px;
       margin-bottom: 20px;
@@ -150,9 +160,11 @@
 
     .personal-service2 {
       @include flex(center, flex-start);
+
       & > img {
         margin-right: 20px;
       }
+
       .personal-job2 {
         font-size: 15px;
       }

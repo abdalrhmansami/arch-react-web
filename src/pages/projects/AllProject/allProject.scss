@@ -119,6 +119,7 @@
 
     .pic-work:hover {
       transform: scale(1.2);
+      
       .red-overly {
         opacity: 1;
 
@@ -141,6 +142,7 @@
     .photo-work {
       flex-flow: row wrap;
       @include flex(start, flex-start);
+      
       .parent-work-pic {
         margin-bottom: 2px;
         flex-grow: 0;

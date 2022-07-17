@@ -7,16 +7,23 @@
   overflow: hidden;
   transition: 0.2s all ease-in-out;
   @include flex(center, space-between);
+
   .logo {
     font-size: $fontSizeMedium;
     font-weight: 700;
   }
+
   .list-nav {
     width: 50%;
   }
+
   ul {
     @include flex(center, space-between);
     font-size: 16px;
+
+    & > .active {
+      font-weight: 700;
+    }
   }
 
   .humburger {
@@ -24,6 +31,7 @@
     height: 20px;
     @include flex(center, space-between);
     flex-direction: column;
+
     .line {
       width: 25px;
       height: 2px;
@@ -51,7 +59,8 @@
       @include flex(start, space-around);
       flex-direction: column;
       height: 100%;
-      &>*{
+
+      & > * {
         margin-bottom: 10px;
       }
     }
@@ -64,10 +73,12 @@
       cursor: pointer;
     }
   }
+
   .active {
     height: 70px;
-    .list-nav{
-        display: none;
+
+    .list-nav {
+      display: none;
     }
   }
 }
