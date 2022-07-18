@@ -1,5 +1,4 @@
-import React from "react";
-import AllProject from "./AllProject/AllProject";
+import AllProject from "./all-Project/AllProject";
 import HeaderProject from "./header-project/HeaderProject";
 
 const Projects = () => {

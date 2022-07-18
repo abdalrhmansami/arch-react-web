@@ -25,8 +25,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 .error-label {
   font-weight: 700;
   color: $dangerColor;
@@ -73,32 +71,6 @@ li {
   background-color: $mainBg;
 }
 
-.title {
-  font-size: $fontSizeMedium;
-  font-weight: 700;
-}
-
 .red {
   color: $dangerColor;
-}
-
-.haed__page-rt {
-  @include flex(flex-end, flex-end);
-  margin-bottom: 20px;
-}
-
-.haed__page-cn {
-  @include flex(flex-end, space-between);
-  margin-bottom: 20px;
-}
-
-.haed__page-lt {
-  @include flex(flex-end, flex-start);
-  margin-bottom: 20px;
-}
-
-.form__content {
-  background-color: $white;
-  border-radius: 12px;
-  padding: 20px;
 }

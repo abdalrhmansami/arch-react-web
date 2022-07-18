@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Zoom from "react-reveal/Zoom";
 import Tabs from "../../../components/tabs/Tabs";
 
