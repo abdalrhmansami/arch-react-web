@@ -1,53 +1,5 @@
 @use "../../../scss/abstracts/" as *;
 
-.tabs-projects {
-  margin-top: 30px;
-  width: 40%;
-  @include centerDiv();
-  @include flex();
-
-  & > ul {
-    @include flex(center, space-between);
-    width: 100%;
-    font-size: 13px;
-    transition: 0.3s all ease;
-
-    & > li {
-      padding: 10px 5px;
-      position: relative;
-      cursor: pointer;
-      transition: 0.2s all ease;
-
-      &::before {
-        transition: 0.2s all ease;
-        position: absolute;
-        height: 3px;
-        content: "";
-        width: 0%;
-        background-color: $dangerColor;
-        z-index: 99;
-        bottom: -1px;
-        left: 0;
-      }
-
-      &.active {
-        color: $dangerColor;
-      }
-
-      &.active::before {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.line-project {
-  width: 40%;
-  height: 2px;
-  background-color: rgb(238, 238, 238);
-  @include centerDiv();
-}
-
 //  projectsection
 .project-section {
   .photo-work {
@@ -119,7 +71,7 @@
 
     .pic-work:hover {
       transform: scale(1.2);
-      
+
       .red-overly {
         opacity: 1;
 
@@ -142,7 +94,7 @@
     .photo-work {
       flex-flow: row wrap;
       @include flex(start, flex-start);
-      
+
       .parent-work-pic {
         margin-bottom: 2px;
         flex-grow: 0;

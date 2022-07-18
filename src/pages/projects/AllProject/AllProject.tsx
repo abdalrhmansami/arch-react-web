@@ -1,32 +1,13 @@
 import { useState } from "react";
 import Zoom from "react-reveal/Zoom";
+import Tabs from "../../../components/tabs/Tabs";
 
 import "./allProject.scss";
-import { dataTabs } from "../../../constant/tabs-data";
 
 const AllProject = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const activeElement = (index: number) => {
-    setActiveIndex(index);
-  };
-
   return (
     <div>
-      <div className="tabs-projects">
-        <ul>
-          {dataTabs.map((el, index) => (
-            <li
-              key={el.number}
-              className={`${activeIndex === index && "active"}`}
-              onClick={() => activeElement(index)}
-            >
-              {el.name}
-            </li>
-          ))}
-        </ul>
-        <hr />
-      </div>
+      <Tabs />
       <div className="line-project"></div>
       <br />
       <section className="project-section">
