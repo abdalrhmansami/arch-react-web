@@ -12,7 +12,6 @@
 }
 
 // large screen
-
 @for $i from 1 through 12 {
   $v: math.div($i, 12) * 100;
 
@@ -22,7 +21,6 @@
 }
 
 // medium screen
-
 @include minComputer {
   @for $i from 1 through 12 {
     $v: math.div($i, 12) * 100;
@@ -38,7 +36,6 @@
 }
 
 // tablet screen
-
 @include tablet {
   @for $i from 1 through 12 {
     $v: math.div($i, 12) * 100;
@@ -54,7 +51,6 @@
 }
 
 // small screen
-
 @include mobile {
   @for $i from 1 through 12 {
     $v: math.div($i, 12) * 100;
